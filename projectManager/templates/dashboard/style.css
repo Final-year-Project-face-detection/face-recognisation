@@ -1,0 +1,14 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.logo{
+    height: fit-content;
+    max-width: 500px;
+    padding-left: 10px;
+}
+.mark{
+    position: center;
+    margin : 100px;
+}
