@@ -4,7 +4,7 @@
 Click [Python](https://www.python.org/downloads/) to install Python.
 
 
-## Visual Studio code (For c/c++ compliers)
+## Visual Studio Code (For c/c++ Compliers)
 Click [Vscode](https://code.visualstudio.com/Download) to install Visual Studio Code.
 
 ```

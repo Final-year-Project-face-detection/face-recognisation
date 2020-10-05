@@ -63,7 +63,7 @@ class LiveWebCam(object):
         while True:
             success, img = self.url.read()
             resize = cv2.resize(img, (640, 480), interpolation=cv2.INTER_LINEAR)
-            ret, jpeg = cv2.imencode('.jpg', resize)
+            ret, jpeg = cv2.imencode('.png', resize)
             imgS = cv2.resize(img, (0, 0), None, 0.25, 0.25)
             imgS = cv2.cvtColor(imgS, cv2.COLOR_BGRA2RGB)
 
@@ -89,8 +89,8 @@ class LiveWebCam(object):
                     cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
                     markAttendence(name)
                     0xFF == ord('q')
-            ret, jpeg = cv2.imencode('.jpg', img)
+            ret, jpeg = cv2.imencode('.png', img)
             return jpeg.tobytes()
 
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+if cv2.waitKey(1) & 0xFF == ord('q'):
+    exit(43)

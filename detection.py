@@ -4,7 +4,7 @@ import face_recognition
 import os
 from datetime import datetime
 
-path = 'TrainImages'
+path = 'projectManager/studentsAttendence/TrainImages'
 images = []
 classNames = []
 myList = os.listdir(path)
@@ -27,7 +27,7 @@ def findEncodings(images):
 
 
 def markAttendence(name):
-    with open('Attendence.csv', 'r+') as f:
+    with open('projectManager/studentsAttendence/Attendence.csv', 'r+') as f:
         myDataList = f.readlines()
         nameList = []
         for line in myDataList:

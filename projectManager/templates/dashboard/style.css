@@ -12,3 +12,7 @@ body{
     position: center;
     margin : 100px;
 }
+
+.form-camnum{
+    width: 50px;
+}

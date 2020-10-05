@@ -5,8 +5,8 @@ WORKDIR /facedetection
 
 # install dependencies
 COPY requirements.txt ./
-COPY TrainImages ./
-COPY Attendence.csv ./
+COPY projectManager/studentsAttendence/TrainImages ./
+COPY projectManager/studentsAttendence/Attendence.csv ./
 RUN pip install -r requirements.txt
 # Copy source code
 COPY detection.py ./

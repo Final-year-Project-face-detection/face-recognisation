@@ -11,18 +11,28 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <!-- Just an image -->
+
+    <!-- College logo -->
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img class="logo" src="{% static 'dashboard/images/bmslogo.png' %}" alt="logo">
       </a>
     </nav>
 
+    <!-- Selecting Camara -->
+    <form action="{% url 'dashboard' %}" method="POST">
+        {% csrf_token %}
+        <select >
+            <option selected="selected" disabled>Select Classroom</option>
+            {% for camera in cameras %}
+                <option name="cameranumber" value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
+            {% endfor %}
+        </select>
+    <input type="submit" value="Submit">
+    </form>
+
+    <!-- Button to mark attendance -->
     <a href="{% url 'markattendence'%}" class="btn btn-success mark"> Mark Attendence</a>
-
-
-
-
 
 
 
