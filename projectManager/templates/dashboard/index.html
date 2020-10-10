@@ -1,54 +1,49 @@
-{% load static %}
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image" sizes="16x16">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'dashboard/style.css' %}">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Marking Attendance</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+ 
 </head>
 <body>
-
-    <!-- College logo -->
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img class="logo" src="{% static 'dashboard/images/bmslogo.png' %}" alt="logo">
-      </a>
-    </nav>
-
-    <!-- Selecting Camara -->
-    <form action="{% url 'dashboard' %}" method="POST">
-        {% csrf_token %}
-        <select >
-            <option selected="selected" disabled>Select Classroom</option>
-            {% for camera in cameras %}
-                <option name="cameranumber" value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
-            {% endfor %}
-        </select>
-    <input type="submit" value="Submit">
-    </form>
-
-    <!-- Button to mark attendance -->
-    <a href="{% url 'markattendence'%}" class="btn btn-success mark"> Mark Attendence</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+ <div class="bg-image">
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+       <div class= "container">
+         <div class = "image">
+          <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="https://bmsit.ac.in/" target="_blank">
+              <img class="logo" src="bmslogo.png" alt="logo">
+            </a>
+          </nav>
+        </div>
+        <br>
+        <div class="select"> 
+          
+          <form class="opt" action="{% url 'dashboard' %}" method="POST"> 
+            <select  class="box">
+                <option  selected="selected" disabled> Select Classroom</option>
+                    <option name="cameranumber" value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
+            </select>
+        <input type="submit" value="Submit">
+        </form>
+        </div>
+        <div class="marker">
+        <a href="{% url 'markattendence'%}" class="btn btn-success mark"> Mark Attendence</a>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   </div>
 </body>
 </html>
