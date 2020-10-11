@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="icon" href="{% static 'dashboard/images/favicon.png' %}" type="image/png" sizes="16x16"> 
   <title>Marking Attendance</title>
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'dashboard/style.css' %}">
  
 </head>
 <body>
@@ -22,7 +23,7 @@
          <div class = "image">
           <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="https://bmsit.ac.in/" target="_blank">
-              <img class="logo" src="bmslogo.png" alt="logo">
+              <img class="logo" src="{% static 'dashboard/images/bmslogo.png' %}" alt="logo">
             </a>
           </nav>
         </div>
@@ -30,9 +31,12 @@
         <div class="select"> 
           
           <form class="opt" action="{% url 'dashboard' %}" method="POST"> 
+          {% csrf_token %}
             <select  class="box">
                 <option  selected="selected" disabled> Select Classroom</option>
-                    <option name="cameranumber" value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
+                    {% for camera in cameras %}
+                      <option name="cameranumber" value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
+                    {% endfor %}
             </select>
         <input type="submit" value="Submit">
         </form>

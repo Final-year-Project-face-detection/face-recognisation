@@ -8,7 +8,7 @@
   <title>Attendance Page</title>
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% 'login/login.css' %}">
+  <link rel="stylesheet" href="{{ 'login/login.css' }}">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <div class="col-md-7">
               <div class="card-body">
                 <div class="brand-wrapper">
-                  <img src="bmslogo.png" alt="logo" class="logo">
+                  <img src="{% static 'bmslogo.png' %}" alt="logo" class="logo">
                 </div>
                 <p class="login-card-description">Welcome to Attendance Management System</p>
                 <form action="#!">

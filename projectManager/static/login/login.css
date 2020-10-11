@@ -24,7 +24,7 @@ body
 {
   border: 0;
   border-radius: 27.5px;
-  box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+  box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
   overflow: hidden;
  }
   
@@ -64,27 +64,45 @@ body
     {
     max-width: 400px;
    }
+   .form-group i
+   {
+        position: absolute;
+   }
+   .form-group
+   {
+      width : 80%;
+      margin-bottom:20px;
+   }
+ .icon {
+    padding: 20px;
+    background:  white;
+    color: #0d5cdb;
+    min-width: 50px;
+   
+    text-align: center;
+    border-top: 1px solid #0d5cdb;
+    border-left: 1px solid #0d5cdb;
+    border-bottom: 1px solid #0d5cdb; 
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    height: 50px;
+    
+  
+  }
   .login-card .form-control
    {
     
     border: 1px solid #0d5cdb;
     padding: 15px 25px;
     margin-bottom: 20px;
-    min-height: 45px;
+    height: 50px;
     font-size: 13px;
     line-height: 15;
     font-weight: normal; 
+    text-align: center;
   }
 
-  .icon {
-    padding: 20px;
-    background:  #0d5cdb;
-    color: white;
-    min-width: 50px;
-    min-height: 45px;
-    text-align: center;
-    
-  }
+  
     .login-card .form-control::-webkit-input-placeholder 
     {
       color: #919aa3; 

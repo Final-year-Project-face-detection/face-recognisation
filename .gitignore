@@ -4,3 +4,7 @@ bin/*
 lib/*
 */lib/*
 pyvenv.cfg
+*/.idea/*
+.idea/*
+*/.vscode/*
+.vscode/*
