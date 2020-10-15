@@ -4,7 +4,7 @@ body {
 }
 
 .bg-image {
-    background-image: url("back.jpg");
+    background-image: url("images/back.jpg");
     background-color: #cccccc;
     height: 100%;
     background-position: center;
@@ -34,6 +34,7 @@ body {
         height: 100%;
         object-fit: cover;
     }
+
     .card-body {
         padding: 85px 60px 60px;
 
@@ -83,6 +84,7 @@ body {
             color: #000;
         }
     }
+}
 
    
 

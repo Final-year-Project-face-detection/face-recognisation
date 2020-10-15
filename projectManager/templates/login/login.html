@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Attendance Page</title>
+  <title>Login</title>
+  <link rel="icon" href="{% static 'dashboard/images/favicon.png' %}" type="image/png" sizes="16x16">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ 'login/login.css' }}">
+  <link rel="stylesheet" href="{% static 'login/login.css' %}">
 </head>
 
 <body>
@@ -20,25 +21,26 @@
         <div class="card login-card">
           <div class="row no-gutters">
             <div class="col-md-5">
-              <img src="page.jpg" alt="login" class="login-card-img">
+              <img src="{% static 'login/images/page.jpg' %}" alt="login" class="login-card-img">
             </div>
             <div class="col-md-7">
               <div class="card-body">
                 <div class="brand-wrapper">
-                  <img src="{% static 'bmslogo.png' %}" alt="logo" class="logo">
+                  <img src="{% static 'login/images/bmslogo.png' %}" alt="logo" class="logo">
                 </div>
                 <p class="login-card-description">Welcome to Attendance Management System</p>
-                <form action="#!">
-                  <div class="form-group">
-
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Username/Email address" >
-
+                <form method="POST">
+                  {% csrf_token %}
+                 <div class="form-group">
+                    {% comment %} <input type="text" name="username" id="email" class="form-control" placeholder=username > {% endcomment %}
+                    {{ form }}
+                    {% comment %} {{ form.username }}  {% endcomment %}
                   </div>
                   <div class="form-group mb-4">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="***********">
-
+                    {% comment %} <input type="password" name="password" id="password" class="form-control" placeholder=password > {% endcomment %}
+                    {% comment %} {{ form.password }} {% endcomment %}
                   </div>
-                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Submit">
+                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="Submit" value="Submit" />
                 </form>
               </div>
             </div>
