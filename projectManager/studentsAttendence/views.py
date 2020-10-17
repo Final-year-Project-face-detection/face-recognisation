@@ -1,3 +1,4 @@
+from django.core.exceptions import DisallowedRedirect, SuspiciousOperation
 from django.shortcuts import render, redirect
 from django.http.response import StreamingHttpResponse
 from .detection import LiveWebCam
@@ -10,10 +11,18 @@ from .forms import UserLoginForm
 
 @login_required
 def dashboard(request):
-    context = {
-        'cameras': CameraNumbers.objects.all(),
-    }
-    return render(request, 'dashboard/index.html', context)
+    if request.method == 'POST':
+        cam = request.POST.get('cameranumber')
+        context = {
+            'cameras': CameraNumbers.objects.all(),
+            'cam': cam
+        }
+        return render(request, 'dashboard/index.html', context)
+    elif request.method == 'GET':
+        context = {
+            'cameras': CameraNumbers.objects.all(),
+        }
+        return render(request, 'dashboard/index.html', context)
 
 @login_required
 def markAttendance(request):
@@ -28,9 +37,10 @@ def loginView(request):
         password = form.cleaned_data.get('password')
         user = authenticate(request, username=username, password=password)
         login(request, user)
-        if next:
-            return redirect(next)
-        return redirect('/')
+        if next == '/mark/':
+            # raise DisallowedRedirect(SuspiciousOperation)
+            return redirect('dashboard')
+        return redirect(next)
     context = {
         'form': form,
     }
