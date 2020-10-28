@@ -4,8 +4,7 @@ import face_recognition
 import os
 from datetime import datetime
 from pathlib import Path
-
-# camara location here
+from . import views
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -49,6 +48,7 @@ encodeListKnown = findEncodings(images)
 print(len(encodeListKnown), 'Encoding Complete')
 # print('Encoding Complete')
 # camara location here
+# camara = views.camNum(request)
 camara = 0
 
 

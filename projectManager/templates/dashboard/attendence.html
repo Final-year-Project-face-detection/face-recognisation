@@ -36,13 +36,12 @@
             </a>
           </nav>
         </div>
-
         <br>
 
         <div>
           <img class = "camera" src="{% url 'livecam' %}">
         </div>
-        
+        Selected camera : {{ cam }}
         <div class="teacher">
          <a href="{% url 'dashboard' %}" class="btn btn-success stop">Stop</a>
         </div>
