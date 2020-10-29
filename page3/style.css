@@ -1,0 +1,225 @@
+.bg-image {
+    background-image: url("bg.jpg");
+    background-color: #cccccc;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+  
+    .container    
+    {
+      border: 0;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+      overflow: hidden;
+      background-color:rgb(206, 212, 223);
+      width: 100%;
+      height: 1000px;
+      padding: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative;
+     }
+  
+     .camera
+     {
+       float:right;
+       position: absolute;
+       width:300px;
+       height:225px;
+       background-color: black;
+       border-radius: 20px;
+       box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+       
+     }
+     .logo{
+      height: fit-content;
+      max-width: 500px;
+      padding-left: 50px;
+      width: 100%;
+      height: 50%;
+      
+      
+  }
+  
+  .navbar
+  {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+    
+  
+  }
+  .attend
+  {
+    border-radius:20px;
+    box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+    overflow:hidden;
+    overflow-y: scroll;
+     background-color:rgb(206, 212, 223); ;
+    width:745px;
+    height:800px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+  }
+  .teacher
+  {
+    width:250px;
+    height:600px;
+    float: left;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+    
+  }
+  
+  .t-image
+  {
+    width:170px;
+    height:190px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0px rgba(82, 77, 77, 0.842);
+    margin-left: 15px;
+    float: left;
+    margin-top: 15px;
+  
+    
+  
+  }
+  
+  .timg
+  {
+   
+    width:160px;
+    height:180px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  
+  }
+  .desc
+  {
+    width: 200px;
+    height: 200px;
+    float:left;
+    border-radius: 20px 0px 0px 20px;
+    text-align: center;
+    background-color: rgb(120, 130, 146);
+   
+  }
+  h3
+  {
+    
+      color: rgb(8, 8, 119);
+      font-weight: 50%;
+    font-family: 'Modak';
+    font-size: 30px;
+    margin-top: 50px;
+      text-transform: uppercase;
+      text-shadow: 0 2px white, 0 3px #777;
+  }
+.login
+{
+  padding:5px;
+
+  
+    
+
+}
+.input {
+  width: 80%;
+  padding: 8px 10px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+  
+  .icon {
+    padding: 7px;
+    background: dodgerblue;
+    color: white;
+    min-width: 20px;
+    text-align: center;
+    
+  }
+  .inputfield
+  {
+  width: 70%;
+  padding: 4px 6px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+    
+    .btn:hover {
+      opacity: 0.8;
+    }
+    
+  
+
+  .student
+  {
+    margin-left: 20px;
+    width: 150px;
+    height:280px;
+    float: left;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+    
+  }
+  .std
+  {
+    width:120px;
+    height: 120px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  
+  }
+.s-image
+{
+  width:130px;
+    height:130px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 rgba(137, 135, 221, 0.842);
+    margin-left: 10px;
+    float: left;
+    margin-top: 15px;
+  
+}
+.stlogin
+{  padding:5px;
+
+}
+.card-img-top{
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.column{
+  margin-left: 10px;
+}
+.card{
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+
+}
+.teacher-logo{
+  height:100px;
+  margin-left: 75px;
+  margin-top: 20px;
+}
+
+.btn-details{
+  width: 150px;
+  margin-left: 50px;
+  margin-top: 10px
+}
