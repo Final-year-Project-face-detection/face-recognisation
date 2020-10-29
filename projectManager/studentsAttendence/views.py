@@ -21,7 +21,7 @@ def dashboard(request):
         return render(request, 'dashboard/index.html', context)
     elif request.method == 'GET':
         context = {
-            'cameras': CameraNumbers.objects.all(),
+            'cameras': CameraNumbers.objects.all().order_by('Classroom'),
         }
         return render(request, 'dashboard/index.html', context)
 
@@ -73,6 +73,6 @@ def livecam_feed(request):
                                  content_type='multipart/x-mixed-replace; boundary=frame')
 
 
-# def camNum(detection):
-#     cam = request.session.get('cam')
-#     return cam
+def camNum(request):
+    cam = request.session.get('cam')
+    return cam

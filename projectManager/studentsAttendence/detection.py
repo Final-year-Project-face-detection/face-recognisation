@@ -4,8 +4,9 @@ import face_recognition
 import os
 from datetime import datetime
 from pathlib import Path
-from . import views
-
+import studentsAttendence.views
+import django
+from django.http import request
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 loc = os.path.join(BASE_DIR, 'studentsAttendence/TrainImages')
@@ -50,6 +51,8 @@ print(len(encodeListKnown), 'Encoding Complete')
 # camara location here
 # camara = views.camNum(request)
 camara = 0
+
+        
 
 
 class LiveWebCam(object):
