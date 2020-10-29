@@ -22,7 +22,10 @@ class FirstYear(models.Model):
     usn = models.CharField(max_length=10)
     branch = models.CharField(max_length=10, choices=BRANCHES)
     section = models.CharField(max_length=1, choices=SECTION)
-    images = models.FileField(max_length=50, upload_to='FirstYear')
+    images = models.FileField(max_length=50, upload_to='CSE/FirstYear')
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name_plural = 'First Year'
@@ -48,7 +51,10 @@ class SecondYear(models.Model):
     usn = models.CharField(max_length=10)
     branch = models.CharField(max_length=10, choices=BRANCHES)
     section = models.CharField(max_length=1, choices=SECTION)
-    images = models.FileField(max_length=50, upload_to='SecondYear')
+    images = models.FileField(max_length=50, upload_to='CSE/SecondYear')
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Second Year'
@@ -74,7 +80,10 @@ class ThirdYear(models.Model):
     usn = models.CharField(max_length=10)
     branch = models.CharField(max_length=10, choices=BRANCHES)
     section = models.CharField(max_length=1, choices=SECTION)
-    images = models.FileField(max_length=50, upload_to='ThirdYear')
+    images = models.FileField(max_length=50, upload_to='CSE/ThirdYear')
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Third Year'
@@ -97,10 +106,13 @@ class FourthYear(models.Model):
         ('C', 'C Section'),
     )
     name = models.CharField(max_length=50)
-    usn = models.CharField(max_length=10)
+    usn = models.CharField(max_length=10, unique=True)
     branch = models.CharField(max_length=10, choices=BRANCHES)
     section = models.CharField(max_length=1, choices=SECTION)
-    images = models.FileField(max_length=50, upload_to='FourthYear')
+    images = models.FileField(max_length=50, upload_to='CSE/FourthYear')
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Fourth Year'

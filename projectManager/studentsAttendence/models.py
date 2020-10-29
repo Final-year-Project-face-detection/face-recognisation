@@ -43,7 +43,7 @@ class CameraNumbers(models.Model):
 
 
     def __str__(self):
-        return 'Classroom'
+        return self.Classroom
 
     class Meta:
         verbose_name_plural = 'Camara Details'

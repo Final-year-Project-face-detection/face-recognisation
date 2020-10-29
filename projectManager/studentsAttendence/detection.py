@@ -4,12 +4,9 @@ import face_recognition
 import os
 from datetime import datetime
 from pathlib import Path
-import studentsAttendence.views
-import django
-from django.http import request
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-loc = os.path.join(BASE_DIR, 'studentsAttendence/TrainImages')
+loc = os.path.join(BASE_DIR, 'media/CSE/FourthYear')
 images = []
 classNames = []
 myList = os.listdir(loc)

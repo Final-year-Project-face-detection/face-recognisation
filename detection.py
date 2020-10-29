@@ -4,7 +4,7 @@ import face_recognition
 import os
 from datetime import datetime
 
-path = 'projectManager/media'
+path = 'projectManager/studentsAttendence/TrainImages'
 images = []
 classNames = []
 myList = os.listdir(path)
