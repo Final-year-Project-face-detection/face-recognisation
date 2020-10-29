@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-  <!-- <link rel="stylesheet" href="{% static 'dashboard/style.css' %}"> -->
-  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="{% static 'dashboard/style.css' %}">
+<!--  <link rel="stylesheet" href="style.css">-->
  
 </head>
 <body>
@@ -25,42 +25,43 @@
         
         <label class="logoutLblPos">
           <i class='fas fa-user-alt' style='font-size:30px;color:red'></i><br>
-          <span class="glyphicon glyphicon-user" style="height:50px;width:20px"></span> User Name<br>
-          <input name="submit2" type="submit" id="submit2" value="log out">
+          <span class="glyphicon glyphicon-user" style="height:50px;width:20px"></span>{{ request.user}} <br>
+<!--          <input name="submit2" type="submit" id="submit2" value="log out">-->
+            <a  class="btn btn-light" href="{% url 'logout' %}"> Logout</a>
          </label>
    
          <div class = "image">
           <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="https://bmsit.ac.in/" target="_blank">
-              <!-- <img class="logo" src="{% static 'dashboard/images/bmslogo.png' %}" alt="logo"> -->
-              <img class="logo" src="/bmslogo.png" alt="logo">
+              <img class="logo" src="{% static 'dashboard/images/bmslogo.png' %}" alt="logo">
+<!--              <img class="logo" src="/bmslogo.png" alt="logo">-->
             </a>
           </nav>
         </div>
         <br>
-        <span>Username : {{ request.user}} </span>
-        <span></span>
-        <!-- <a href="{% url 'logout' %}"> Logout</a> -->
-        <a href="#"> Logout</a>
+<!--        <span>Username : {{ request.user}} </span>-->
+<!--        <span></span>-->
+<!--         <a href="{% url 'logout' %}"> Logout</a>-->
+<!--        <a href="#"> Logout</a>-->
         <div class="select"> 
           
           <form class="opt" action="{% url 'dashboard' %}" method="POST"> 
-          <!-- {% csrf_token %} -->
+           {% csrf_token %}
             <select  class="box" name="cameranumber">
                 <option  selected="selected" disabled> Select Classroom</option>
-                    <!-- {% for camera in cameras %} -->
+                    {% for camera in cameras %}
                       <option  value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
-                    <!-- {% endfor %} -->
+                    {% endfor %}
             </select>
             <input  type="submit" value="Submit">
         </form>
         </div>
-           <!-- {% if cam  %}
+            {% if cam  %}
                 {{ cam }}
-           {% endif %} -->
+           {% endif %}
         <div class="marker">
-        <!-- <a href="{% url 'markattendence'%}" class="btn btn-success mark"> Mark Attendence</a> -->
-        <a href="#" class="btn btn-success mark"> Mark Attendence</a>
+        <a href="{% url 'markattendence'%}" class="btn btn-success mark"> Mark Attendence</a>
+<!--        <a href="#" class="btn btn-success mark"> Mark Attendence</a>-->
         </div>
        </div>
     </main>

@@ -52,9 +52,6 @@ print(len(encodeListKnown), 'Encoding Complete')
 # camara = views.camNum(request)
 camara = 0
 
-        
-
-
 class LiveWebCam(object):
     def __init__(self):
         self.url = cv2.VideoCapture(camara)
