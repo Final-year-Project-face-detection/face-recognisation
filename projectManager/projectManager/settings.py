@@ -38,7 +38,8 @@ INSTALLED_APPS = [
 
     # custom apsp
     'studentsAttendence',
-    'accounts'
+    'accounts',
+    'CSE',
 ]
 
 MIDDLEWARE = [
