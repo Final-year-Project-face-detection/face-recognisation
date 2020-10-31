@@ -3,13 +3,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Attendance Login Page</title>
+    <title>Attendance Register Page</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Kumar One ' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
            
             <div class="header-right">
                 <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
-                <a href="register.html"><i class="fas fa-user-plus"></i> Register </a>
+                <a href="login.html"><i class="fa fa-fw fa-user"></i> Login </a>
         
 
             </div>
@@ -47,12 +47,12 @@
                                     <div class="brand-wrapper">
                                         <img src="bmslogo.png" alt="logo" class="logo">
                                     </div>
-                                    <p class="login-card-description">Login to Attendance Management System</p>
+                                    <p class="login-card-description">Register to Attendance Management System</p>
                                     <form action="#!">
                                         <div class="form-group">
-                                            <i class="fa fa-envelope icon"> </i>
+                                            <i class="fa fa-user icon"> </i>
                                             <input type="email" name="email" id="email" class="form-control"
-                                                placeholder="Email address">
+                                                placeholder="Username/Email address">
 
                                         </div>
                                         <div class="form-group mb-4">
@@ -61,8 +61,15 @@
                                                 placeholder="Enter password">
 
                                         </div>
-                                        <input name="login" id="login" class="btn btn-block login-btn mb-4"
-                                            type="button" value="Login">
+                                        <div class="form-group mb-4">
+                                            <i class="fa fa-key icon"> </i>
+                                            <input type="password" name="Rpassword" id="Rpassword" class="form-control"
+                                                placeholder="Repeat password">
+
+                                        </div>
+                                        <input name="register" id="register" class="btn btn-block login-btn mb-4"
+                                            type="button" value="Register">
+                                            <p style="color: rgb(95, 27, 27);"><b>Already have an account? <a href="login.html">Login</a></b>
                                     </form>
                                 </div>
                             </div>
