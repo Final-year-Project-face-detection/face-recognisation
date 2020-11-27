@@ -57,8 +57,13 @@
         </form>
         </div>
             {% if cam  %}
-                {{ cam }}
-           {% endif %}
+                Camera :
+                {{ cam }} <br>
+            Semister :{{ camera.semester}} <br>
+            Branch : {{ camera.branch}} <br>
+            year : {{ camera.year }} <br>
+            section : {{ camera.section}}
+           {% endif %}<br>
         <div class="marker">
         <a href="{% url 'markattendence'%}" class="btn btn-success mark"> Mark Attendence</a>
 <!--        <a href="#" class="btn btn-success mark"> Mark Attendence</a>-->

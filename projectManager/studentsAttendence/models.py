@@ -42,8 +42,5 @@ class CameraNumbers(models.Model):
     section = models.CharField(max_length=1, choices=SECTION, blank=True)
 
 
-    def __str__(self):
-        return self.Classroom
-
     class Meta:
         verbose_name_plural = 'Camara Details'

@@ -15,8 +15,9 @@ def dashboard(request):
         cam = request.POST.get('cameranumber')
         request.session['cam']= cam
         context = {
-            'cameras': CameraNumbers.objects.all(),
-            'cam': cam
+            'cam': cam,
+            'cameras': CameraNumbers.objects.all().order_by('Classroom'),
+            'camera': CameraNumbers.objects.get(Cameras=cam),
         }
         return render(request, 'dashboard/index.html', context)
     elif request.method == 'GET':

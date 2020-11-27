@@ -78,7 +78,7 @@ class LiveWebCam(object):
                         name = classNames[matchIndex].upper()
                     else:
                         name = "UNKNOWN"
-                    # print(name)
+                    print(name)
                     y1, x2, y2, x1 = faceLoc
                     y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
                     cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
