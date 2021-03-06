@@ -1,36 +1,42 @@
-## Welcome to GitHub Pages
+## Attendence System Using Face Recognition.
 
-You can use the [editor on GitHub](https://github.com/Final-year-Project-face-detection/face-recognisation/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+College final Year Project - BMSIT
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Installing the Dependencies
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To run this application on your local Machine you need to have all these dependencies installed.
 
 ```markdown
-Syntax highlighted code block
+## Install Python
 
-# Header 1
-## Header 2
-### Header 3
+Click [Python](https://www.python.org/downloads/) to install Python.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Visual Studio Code (For c/c++ Compliers)
+Click [Vscode](https://code.visualstudio.com/Download) to install Visual Studio Code.
 
-**Bold** and _Italic_ and `Code` text
+```
+vscode --> extensions(ctrl+shift+x) --> C/C++ Extension Pack 
+```
+or
+```
+vscode --> ctrl+p --> ext install mischelebuha.c-cpp-extension-pack
+```
+Restart pc after this
 
-[Link](url) and ![Image](src)
+## Install python libraries
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install
+
+```bash
+pip install requirements.txt
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## License
+[BMSIT](https://bmsit.ac.in/)
+```
 
-### Jekyll Themes
+For more details see [GitHub Repository](https://github.com/Final-year-Project-face-detection/face-recognisation/).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Final-year-Project-face-detection/face-recognisation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
