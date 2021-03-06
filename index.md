@@ -6,7 +6,7 @@ College final Year Project - BMSIT
 
 To run this application on your local Machine you need to have all these dependencies installed.
 
-```markdown
+
 ## Install Python
 
 Click [Python](https://www.python.org/downloads/) to install Python.
@@ -33,7 +33,7 @@ pip install requirements.txt
 
 ## License
 [BMSIT](https://bmsit.ac.in/)
-```
+
 
 For more details see [GitHub Repository](https://github.com/Final-year-Project-face-detection/face-recognisation/).
 
