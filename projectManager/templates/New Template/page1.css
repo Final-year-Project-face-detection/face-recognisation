@@ -1,0 +1,180 @@
+body 
+{
+  font-family: "Karla", sans-serif;
+  
+ 
+  min-height: 100vh;
+}
+.bg-image {
+  
+  background-color: #e7d4b5;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+.brand-wrapper 
+{
+  margin-bottom: 25px; 
+  
+}
+  .brand-wrapper .logo {
+  height: 80px; 
+}
+
+.login-card 
+{
+  border: 0;
+  border-radius: 27.5px;
+  box-shadow: 0 10px 30px 0 #a0937d;
+  overflow: hidden;
+ }
+  
+.login-card-img 
+{
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; 
+}
+
+.login-card .card-body 
+{
+  padding: 85px 60px 60px; 
+}
+    
+@media (max-width: 422px)
+{
+  .login-card .card-body
+   {
+    padding: 35px 24px;
+  } 
+}
+  
+.login-card-description
+{
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 29px;
+    font-family: 'Rasa', serif;
+    
+   }
+  
+   .login-card form
+    {
+    max-width: 400px;
+   }
+   .form-group i
+   {
+        position: absolute;
+   }
+   .form-group
+   {
+      width : 80%;
+      margin-bottom:20px;
+    
+      
+   }
+ .icon {
+    padding: 20px;
+    background:  white;
+    color:black ;
+    min-width: 50px;
+   
+    text-align: center;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black; 
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    height: 50px;
+    
+  
+  }
+  .login-card .form-control
+   {
+    
+    border: 1px solid black;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    height: 50px;
+    font-size: 13px;
+    line-height: 15;
+    font-weight: normal; 
+    text-align: center;
+  }
+
+  
+    .login-card .form-control::-webkit-input-placeholder 
+    {
+      color: black; 
+    }
+    .login-card .form-control::-moz-placeholder 
+    {
+      color: black; 
+    }
+    .login-card .form-control:-ms-input-placeholder 
+    {
+      color: black; 
+    }
+    .login-card .form-control::-ms-input-placeholder
+     {
+      color: black;
+     }
+    .login-card .form-control::placeholder
+     {
+      color: black;
+     }
+  .login-card .login-btn
+   {
+    /* padding: 13px 20px 12px; */
+    padding-top: 13px;
+    padding-bottom: 12px;
+    
+    background-color: black;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    /* width:50%; */
+    margin-bottom: 24px;
+   }
+    .login-card .login-btn:hover
+     {
+      border: 1px solid #000;
+      background-color: transparent;
+      color:black;
+     }
+     .login-btn
+     {
+       width:40%;
+       margin-left: 22%;
+     }
+  
+     @media (max-width: 422px)
+{
+  .login-btn
+   {
+    width:50%;
+       margin-left: 27%;
+  } 
+  .form-group
+   {
+      width : 80%;
+      margin-bottom:20px;
+      margin-left: 40px;
+      
+   }
+   .login-card-description
+{
+    margin-left: 50px;
+   }
+
+}
+
+
