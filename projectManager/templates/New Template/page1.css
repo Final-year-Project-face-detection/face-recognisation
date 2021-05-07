@@ -64,19 +64,22 @@ body
     
    }
   
+  
    .login-card form
     {
     max-width: 400px;
    }
-   .form-group i
+   .in i
    {
         position: absolute;
+        
    }
-   .form-group
+   
+   .in
    {
       width : 80%;
       margin-bottom:20px;
-    
+      margin-left: 100px;
       
    }
  .icon {
@@ -84,7 +87,6 @@ body
     background:  white;
     color:black ;
     min-width: 50px;
-   
     text-align: center;
     border-top: 1px solid black;
     border-left: 1px solid black;
@@ -131,7 +133,7 @@ body
      }
   .login-card .login-btn
    {
-    /* padding: 13px 20px 12px; */
+    
     padding-top: 13px;
     padding-bottom: 12px;
     
@@ -141,7 +143,6 @@ body
     font-weight: bold;
     line-height: 20px;
     color: #fff;
-    /* width:50%; */
     margin-bottom: 24px;
    }
     .login-card .login-btn:hover
@@ -153,28 +154,15 @@ body
      .login-btn
      {
        width:40%;
-       margin-left: 22%;
+       margin-left: 130px;
+       
      }
+
+     .but{
+       text-align: center;
+       
+     } 
+
   
-     @media (max-width: 422px)
-{
-  .login-btn
-   {
-    width:50%;
-       margin-left: 27%;
-  } 
-  .form-group
-   {
-      width : 80%;
-      margin-bottom:20px;
-      margin-left: 40px;
-      
-   }
-   .login-card-description
-{
-    margin-left: 50px;
-   }
-
-}
-
+ 
 

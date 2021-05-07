@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMSIT Attendance Marking Page</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;600&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="page2.css">
+</head>
+
+<body>
+  <!-- for centre -->
+  <div class="bg-image">
+
+
+
+    <div class="brand-wrapper ">
+      <img src="bmslogo.png" alt="logo" class="logo">
+    </div>
+    <div class="main">
+      <div class="menu ">
+        <div class="srh" style="float:left;margin-right: 30px;">
+          <div style="float: left;">
+            <form class="example " action="">
+              <input type="text" class="in" placeholder="Search Attendance" name="search">
+            </form>
+          </div>
+          <div style="float: left;">
+            <button class="ibut" type="submit" onclick="disp1()"><i class="fa fa-search"></i></button>
+          </div>
+
+        </div>
+        <div>
+          <button type="submit" class="butt" onclick="disp2()">New Attendance <i
+              class="fa fa-check-circle"></i></button>
+        </div>
+
+      </div>
+    </div>
+    <div id="disp1" class="content1">
+      <div class="block ">
+        <div>
+          <img src="jan.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> January </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="feb.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> Febraury </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="march.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> March </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="april.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> April </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="may.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> May </button>
+        </div>
+      </div>
+
+      <div class="block">
+        <div>
+          <img src="june.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> June </button>
+        </div>
+      </div>
+      <div class="divide">
+
+      </div>
+      <div class="block">
+        <div>
+          <img src="july.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> July </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="august.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> August </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="sept.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> September </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="october.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> October </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="november.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> November </button>
+        </div>
+      </div>
+      <div class="block">
+        <div>
+          <img src="december.jpg" alt="logo" class="month">
+        </div>
+        <div>
+          <button class="but"> December</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="disp2" class="content2">
+      
+
+      <form action="">
+        <div style="float: left; margin-right:10px">
+        <select class="sel">
+          <option>Select Classroom</i></option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+        <div style="float: left;">
+        <input type="submit" value="Submit" class="sub">
+      </div>
+      </form>
+
+      <div class="info">
+
+      <input type="text" class="inf"  value="Camera Number" disabled>
+      <input type="text" class="inf" value="Branch" disabled>
+      <input type="text" class="inf" value="Semester" disabled>
+      <input type="text" class="inf" value="Section" disabled>
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+    <script>
+      function disp1() {
+        document.getElementById("disp1").style.display = "block";
+      }
+      function disp2() {
+        document.getElementById("disp2").style.display = "block";
+      }
+    </script>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </div>
+</body>
+
+</html>
