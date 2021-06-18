@@ -74,7 +74,7 @@ class LiveWebCam(object):
                 matchIndex = np.argmin(faceDis)
 
                 if matches[matchIndex]:
-                    if faceDis[0] < 0.65:
+                    if faceDis[0] < 0.95:
                         name = classNames[matchIndex].upper()
                     else:
                         name = "UNKNOWN"
