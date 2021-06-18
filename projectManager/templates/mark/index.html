@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BMSIT Attendance Marking Page</title>
+  <title>mark</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <!-- <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;600&display=swap" rel="stylesheet"> -->
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="page2.css">
+  <link rel="stylesheet" href="{% static 'mark/index.css' %}">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 
 
     <div class="brand-wrapper ">
-      <img src="bmslogo.png" alt="logo" class="logo">
+      <img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo">
     </div>
     <div class="main">
       <div class="menu ">
@@ -48,7 +48,7 @@
     <div id="disp1" class="content1">
       <div class="block ">
         <div>
-          <img src="jan.jpg" alt="logo" class="month">
+          <img src="{% static 'images/jan.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> January </button>
@@ -56,7 +56,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="feb.jpg" alt="logo" class="month">
+          <img src="{% static 'images/feb.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> Febraury </button>
@@ -64,7 +64,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="march.jpg" alt="logo" class="month">
+          <img src="{% static 'images/march.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> March </button>
@@ -72,7 +72,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="april.jpg" alt="logo" class="month">
+          <img src="{% static 'images/april.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> April </button>
@@ -80,7 +80,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="may.jpg" alt="logo" class="month">
+          <img src="{% static 'images/may.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> May </button>
@@ -89,18 +89,17 @@
 
       <div class="block">
         <div>
-          <img src="june.jpg" alt="logo" class="month">
+          <img src="{% static 'images/june.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> June </button>
         </div>
       </div>
       <div class="divide">
-
       </div>
       <div class="block">
         <div>
-          <img src="july.jpg" alt="logo" class="month">
+          <img src="{% static 'images/july.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> July </button>
@@ -108,7 +107,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="august.jpg" alt="logo" class="month">
+          <img src="{% static 'images/august.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> August </button>
@@ -116,7 +115,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="sept.jpg" alt="logo" class="month">
+          <img src="{% static 'images/sept.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> September </button>
@@ -124,7 +123,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="october.jpg" alt="logo" class="month">
+          <img src="{% static 'images/october.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> October </button>
@@ -132,7 +131,7 @@
       </div>
       <div class="block">
         <div>
-          <img src="november.jpg" alt="logo" class="month">
+          <img src="{% static 'images/november.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> November </button>
@@ -140,41 +139,38 @@
       </div>
       <div class="block">
         <div>
-          <img src="december.jpg" alt="logo" class="month">
+          <img src="{% static 'images/december.jpg' %}" alt="logo" class="month">
         </div>
         <div>
           <button class="but"> December</button>
         </div>
       </div>
-      
     </div>
-
-
     <div id="disp2" class="content2">
-
-
-      <form action="">
+      <form class="opt" action="{% url 'dashboard' %}" method="POST"> 
+      {% csrf_token %}
         <div style="float: left; margin-right:10px">
-          <select class="sel">
-            <option>Select Classroom</i></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+          <select class="sel" name="cameranumber">
+            {% for camera in cameras %}
+              <option  value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
+            {% endfor %}
           </select>
         </div>
         <div style="float: left;">
           <input type="submit" value="Submit" class="sub">
         </div>
       </form>
-
+            {% if cam  %}
+      Camera : {{ cam }}
       <div class="info">
+        <input type="text" class="inf" value="{{ camera.semester}}" disabled>
+        <input type="text" class="inf" value="{{ camera.branch}}" disabled>
+        <input type="text" class="inf" value="{{ camera.year }}" disabled>
+        <input type="text" class="inf" value="{{ camera.section}}" disabled><br>
+        <a class="butt" href="{% url 'markattendence'%}" class="mark"> Mark Attendence</a>
+        {% endif %}
+      </div>
 
-        <input type="text" class="inf" value="Camera Number" disabled>
-        <input type="text" class="inf" value="Branch" disabled>
-        <input type="text" class="inf" value="Semester" disabled>
-        <input type="text" class="inf" value="Section" disabled>
-
-        <button class="mark"> Mark Attendance </button>
 
       </div>
 

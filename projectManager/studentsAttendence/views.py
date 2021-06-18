@@ -19,12 +19,12 @@ def dashboard(request):
             'cameras': CameraNumbers.objects.all().order_by('Classroom'),
             'camera': CameraNumbers.objects.get(Cameras=cam),
         }
-        return render(request, 'dashboard/index.html', context)
+        return render(request, 'mark/index.html', context)
     elif request.method == 'GET':
         context = {
             'cameras': CameraNumbers.objects.all().order_by('Classroom'),
         }
-        return render(request, 'dashboard/index.html', context)
+        return render(request, 'mark/index.html', context)
 
 @login_required
 def markAttendance(request):
@@ -33,7 +33,7 @@ def markAttendance(request):
     context ={
         'cam': cam
     }
-    return render(request, 'dashboard/attendence.html', context)
+    return render(request, 'captures/index.html', context)
 
 
 def loginView(request):
@@ -51,18 +51,13 @@ def loginView(request):
     context = {
         'form': form,
     }
-    return render(request, 'login/login.html', context)
+    return render(request, 'login/index.html', context)
 
 
 def logoutView(request):
     logout(request)
     return redirect('/')
 
-
-# def gen(detection):
-#     while True:
-#         frame = detection.get_frame()
-#         yield b'--frame\r\n' b'Content-Type: image\r\n\r\n' + frame + b'\r\n\r\n'
 
 def gen(detection):
     while True:

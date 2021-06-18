@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BMSIT Attendance Display page</title>
+    <title>Captures</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;600&display=swap" rel="stylesheet"> -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="page3.css">
+    <link rel="stylesheet" href="{% static 'captures/index.css' %}">
 </head>
 
 <body>
@@ -23,10 +23,8 @@
 
 
         <div class="brand-wrapper ">
-            <img src="bmslogo.png" alt="logo" class="logo">
-
-            <div class="camera">
-            </div>
+            <img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo">
+              <img class = "camera" src="{% url 'livecam' %}">
             <div class="show">
             <button class="print"> Print Attendance </button>
             </div>
@@ -36,7 +34,7 @@
 
         <div class="teacher">
             <div>
-                <img src="teacher.png" class="teach">
+                <img src="{% static 'images/teacher.png' %}" class="teach">
             </div>
             <div style="margin:20px;">
                 <p class="one">Mrs. Sushila.M</p>
@@ -58,7 +56,7 @@
         <div class="student">
             <div class="block ">
                 <div>
-                  <img src="teacher.png" alt="logo" class="month">
+                  <img src="{% static 'images/teacher.png' %}" alt="logo" class="month">
                 </div>
                 <div>
                   <button class="but"> 1BY17CS133</button>
@@ -66,7 +64,7 @@
               </div>
               <div class="block ">
                 <div>
-                  <img src="jan.jpg" alt="logo" class="month">
+                  <img src="{% static 'images/jan.jpg' %}" alt="logo" class="month">
                 </div>
                 <div>
                   <button class="but"> 1BY17CS654 </button>
@@ -74,7 +72,7 @@
               </div>
               <div class="block ">
                 <div>
-                  <img src="jan.jpg" alt="logo" class="month">
+                  <img src="{% static 'images/jan.jpg' %}" alt="logo" class="month">
                 </div>
                 <div>
                   <button class="but"> 1BY17CS132 </button>
@@ -82,7 +80,7 @@
               </div>
               <div class="block ">
                 <div>
-                  <img src="jan.jpg" alt="logo" class="month">
+                  <img src="{% static 'images/jan.jpg' %}" alt="logo" class="month">
                 </div>
                 <div>
                   <button class="but"> 1BY17CF765</button>
@@ -90,14 +88,14 @@
               </div>
               <div class="block ">
                 <div>
-                  <img src="jan.jpg" alt="logo" class="month">
+                  <img src="{% static 'images/jan.jpg' %}" alt="logo" class="month">
                 </div>
                 <div>
                   <button class="but"> January </button>
                 </div>
               </div><div class="block ">
                 <div>
-                  <img src="jan.jpg" alt="logo" class="month">
+                  <img src="{% static 'images/jan.jpg' %}" alt="logo" class="month">
                 </div>
                 <div>
                   <button class="but"> January </button>
