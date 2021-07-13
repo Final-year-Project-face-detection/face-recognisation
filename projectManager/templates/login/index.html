@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{% static 'login/index.css' %}">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png" sizes="16x16">
 </head>
 <body>
   <div class="bg-image">
@@ -33,7 +34,7 @@
                   {% csrf_token %}
                  <div class="form-group">
                     {{ form }}
-                      <input name="login" id="login" class="btn btn-block login-btn mb-4" type="Submit" value="Submit" />
+                      <center><input name="login" id="login" class="btn btn-dark .login-btn" type="Submit" value="Submit" /><center>
                   </div>
                 </form>
               </div>

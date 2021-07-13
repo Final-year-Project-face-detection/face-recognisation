@@ -62,14 +62,14 @@ body
   border-radius: 27.5px;
   box-shadow: 0 10px 20px 0 #a0937d;
   background-color:#a0937d;
-  width:auto;
+  width:350px;
   height:465px;
   margin-top: 10px;
-  margin-left: 20px; 
+  margin-left: 50px; 
   padding: 10px;
   text-align: center;
   padding-top: 15px;
-  float: left;
+  float: right;
 
 }
 .teach{
@@ -151,7 +151,7 @@ body
   padding:10px;
   float: left;
 }
-.but{
+.but {
   width:191px;
   background: black;
   color:white;

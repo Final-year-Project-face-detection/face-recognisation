@@ -1,0 +1,88 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMSIT</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'status/index.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png" sizes="16x16">
+
+</head>
+
+<body>
+    <!-- for centre -->
+    <div class="bg-image">
+
+
+
+        <div class="brand-wrapper ">
+           <a href="{% url 'dashboard' %}" ><img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo"></a>
+        </div>
+        <div style="padding: 20px;">
+            <div class="srh" >
+                <div style="float: left;">
+                  <form class="example " action="">
+                  </form>
+                </div>
+                <div style="float: left;">
+                </div>
+      
+              </div>
+
+
+            <div>
+                <a href="{% url 'pdf_view' %}" ><button class="mark"> Print</button></a>
+                <a href="{% url 'pdf_download' %}" ><button class="mark"> Download</button></a>
+    
+              </div>
+        </div>
+
+        <div style="text-align: center;">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>USN</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                {% for val1 in studdetails %}
+                    {% for val2 in statusdetails %}
+                        {% if val1.usn == val2.usn %}           
+                            <tr>
+                                <td>{{ val1.name }}</td>
+                                <td>{{ val1.usn }}</td>
+                                <td>{{ val2.status }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </div>
+</body>
+
+</html>

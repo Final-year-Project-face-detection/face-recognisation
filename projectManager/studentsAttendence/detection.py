@@ -4,13 +4,15 @@ import face_recognition
 import os
 from datetime import datetime
 from pathlib import Path
+from CSE.models import FourthYearASec
+from studentsAttendence.models import StudentsDetails
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-loc = os.path.join(BASE_DIR, 'media/CSE/FourthYear')
+loc = os.path.join(BASE_DIR, 'media/uploads')
 images = []
 classNames = []
 myList = os.listdir(loc)
-# print(myList)
 
 for cl in myList:
     curImg = cv2.imread(f'{loc}/{cl}')
@@ -36,10 +38,17 @@ def markAttendence(name):
             for line in myDataList:
                 entry = line.split(',')
                 nameList.append(entry[0])
+
             if name not in nameList:
                 now = datetime.now()
                 dtString = now.strftime('%H:%M:%S')
+                FourthYearASec.objects.create(
+                    usn = name,
+                    status = 'P'
+                )
                 f.writelines(f'\n{name}, {dtString}')
+                
+                
 
 
 encodeListKnown = findEncodings(images)
@@ -74,7 +83,7 @@ class LiveWebCam(object):
                 matchIndex = np.argmin(faceDis)
 
                 if matches[matchIndex]:
-                    if faceDis[0] < 0.95:
+                    if faceDis[0] < 0.75:
                         name = classNames[matchIndex].upper()
                     else:
                         name = "UNKNOWN"

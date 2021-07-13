@@ -122,6 +122,7 @@ input .in
   border: 1px solid black;
 }
 
+
 .butt:hover {
   background: black;
   color:white;
@@ -197,7 +198,7 @@ input .in
    box-shadow: 0 10px 20px 0 #a0937d;
    
    width:450px;
-   height:410px;
+   height:500px;
      }
 
  .sel{
@@ -268,4 +269,12 @@ input .in
 {
   color: black;
   background-color: white; 
+}
+
+a{
+  text-decoration: none;
+}
+
+.center {
+  margin-left : 60px;
 }

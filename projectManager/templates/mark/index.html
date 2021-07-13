@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png" sizes="16x16">
   <title>mark</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;600&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -17,30 +17,27 @@
 </head>
 
 <body>
-  <!-- for centre -->
   <div class="bg-image">
-
-
-
     <div class="brand-wrapper ">
-      <img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo">
+      <a href="{% url 'dashboard' %}"><img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo"><a>
     </div>
     <div class="main">
       <div class="menu ">
         <div class="srh" style="float:left;margin-right: 30px;">
           <div style="float: left;">
             <form class="example " action="">
-              <input type="text" class="in" placeholder="Search Attendance" name="search">
+              {% comment %} <input type="text" class="in" placeholder="Search Attendance" name="search"> {% endcomment %}
             </form>
           </div>
-          <div style="float: left;">
+          {% comment %} <div style="float: left;">
             <button class="ibut" type="submit" onclick="disp1()"><i class="fa fa-search"></i></button>
-          </div>
+          </div> {% endcomment %}
 
         </div>
         <div>
-          <button type="submit" class="butt" onclick="disp2()">New Attendance <i
-              class="fa fa-check-circle"></i></button>
+          <a type="submit" class="butt" href="{% url 'camselect'%}"">New Attendance <i
+              class="fa fa-check-circle"></i></a>
+
         </div>
 
       </div>
@@ -157,7 +154,8 @@
           </select>
         </div>
         <div style="float: left;">
-          <input type="submit" value="Submit" class="sub">
+          
+        <input type="submit" value="Submit" class="sub">
         </div>
       </form>
             {% if cam  %}
@@ -167,20 +165,11 @@
         <input type="text" class="inf" value="{{ camera.branch}}" disabled>
         <input type="text" class="inf" value="{{ camera.year }}" disabled>
         <input type="text" class="inf" value="{{ camera.section}}" disabled><br>
-        <a class="butt" href="{% url 'markattendence'%}" class="mark"> Mark Attendence</a>
+        <a href="{% url 'markattendence'%}"><button class="butt mark"> Mark Attendence <button></a>
         {% endif %}
       </div>
-
-
       </div>
-
-
-
-
-
     </div>
-
-
     <script>
       function disp1() {
         document.getElementById("disp1").style.display = "block";
@@ -189,16 +178,9 @@
         document.getElementById("disp2").style.display = "block";
       }
     </script>
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
   </div>
 </body>
-
 </html>
