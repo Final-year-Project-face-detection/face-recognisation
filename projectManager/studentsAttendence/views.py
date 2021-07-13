@@ -126,8 +126,8 @@ def ViewPDF(request):
 
 def DownloadPDF(request):
     context = {
-        'details'  : StudentsDetails.objects.all(),
-        'del' : FourthYearASec.objects.all()
+        'studdetails' : StudentsDetails.objects.all(),
+        'statusdetails' : FourthYearASec.objects.all()
     }
     pdf = render_to_pdf('pdfs/pdf_template.html', context)
     response = HttpResponse(pdf, content_type='application/pdf')
