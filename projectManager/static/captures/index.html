@@ -1,0 +1,85 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Captures</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'captures/index.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png" sizes="16x16">
+</head>
+
+<body>
+    <!-- for centre -->
+    <div class="bg-image">
+
+
+
+        <div class="brand-wrapper ">
+            <a href="{% url 'dashboard' %}"><img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo"></a>
+              <img class = "camera" src="{% url 'livecam' %}">
+            <div class="show">
+            <a href=" {% url 'status' %}" ><button class="print"> Print Attendance <button></a>
+            </div>
+        </div>
+
+
+
+        <div class="teacher">
+            <div>
+                <img src="{% static 'images/teacher.png' %}" class="teach">
+            </div>
+            <div style="margin-left:20px;">
+                <p class="one">{{ user.first_name }} {{ user.last_name }}</p>
+                <p class="one" style="margin-top: -15px;">{{ user.email }}</p>
+                <p style="margin-top: -20px;font-weight: bold;">________________</p>
+                <p class="two">Camera Number</p>
+                <p class="two" style="margin-top: -10px;">Branch</p>
+                <p class="two" style="margin-top: -10px;">Semester</p>
+                <p class="two" style="margin-top: -10px;">Section</p>
+                <p style="margin-top: -20px;font-weight: bold;">________________</p>
+                <a href="{% url 'logout'%}" ><button class='mark'> Logout <button> </a>
+            </div>
+        </div>
+
+        <div class="container block">
+            <div class="row align-items-start">
+                <div class="col">
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row row-cols-4" style="margin:5px;">
+                    {% for val1 in details %}
+                    {% for val2 in del %}
+                        {% if val1.usn == val2.usn %} 
+                            <div class="col-sm">
+                                <div>
+                                    <img src= "{{ val1.image.url }}" alt="profile" class="month" />
+                                </div>
+                                <div>
+                                    <button class="but"> {{ val1.name }}</button>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mark</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'mark/index.css' %}">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png" sizes="16x16">
+</head>
+
+<body>
+
+  <div class="bg-image">
+   <div class="brand-wrapper ">
+    <a href="{% url 'dashboard' %}"><img src="{% static 'images/bmslogo.png' %}" alt="logo" class="logo"><a>
+   </div>
+    <div class="content2">
+      <form class="opt" action="{% url 'camselect' %}" method="POST"> 
+      {% csrf_token %}
+        <div style="float: left; margin-right:10px">
+          <select class="sel" name="cameranumber">
+            {% for camera in cameras %}
+              <option  value="{{ camera.Cameras }}">{{ camera.Classroom }} CR</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div style="float: left;">
+          
+        <input type="submit" value="Submit" class="sub">
+        </div>
+      </form>
+     {% if cam  %}
+      <div class="info">
+        <input type="text" class="inf" value="Camera  : {{ cam }}" disabled>
+        <input type="text" class="inf" value="Semester : {{ camera.semester }}" disabled>
+        <input type="text" class="inf" value="Branch : {{ camera.branch }}" disabled>
+        <input type="text" class="inf" value="Year : {{ camera.year }}" disabled>
+        <input type="text" class="inf" value="Section : {{ camera.section }}" disabled><br><br>
+        <a class="butt center" href="{% url 'markattendence'%}" class="mark"> Mark Attendence</a></center>
+        {% endif %}
+      </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </div>
+</body>
+</html>

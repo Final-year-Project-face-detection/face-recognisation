@@ -21,6 +21,8 @@ class FourthYearASec(models.Model):
     name = models.CharField(max_length=50)
     usn = models.CharField(max_length=10, unique=True)
     status = models.CharField(max_length=1, blank=True)
+    etime = models.DateTimeField(blank=True)
+    ltime = models.DateTimeField(blank=True)
 
     def __str__(self):
         return self.name

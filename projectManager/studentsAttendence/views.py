@@ -100,9 +100,11 @@ def camNum(request):
 
 
 def status(request):
+    cam = request.session.get('cam')
     context = {
         'studdetails' : StudentsDetails.objects.all(),
-        'statusdetails' : FourthYearASec.objects.all()
+        'camera': CameraNumbers.objects.get(Cameras=cam),
+        'statusdetails' : FourthYearASec.objects.all(),
     }
     return render(request, 'status/index.html', context)
 
@@ -117,9 +119,11 @@ def render_to_pdf(template_src, context_dict={}):
 
 
 def ViewPDF(request):
+    cam = request.session.get('cam')
     context = {
         'studdetails' : StudentsDetails.objects.all(),
-        'statusdetails' : FourthYearASec.objects.all()
+        'statusdetails' : FourthYearASec.objects.all(),
+        'camera': CameraNumbers.objects.get(Cameras=cam),
     }
     pdf = render_to_pdf('pdfs/pdf_template.html', context)
     return HttpResponse(pdf, content_type='application/pdf')

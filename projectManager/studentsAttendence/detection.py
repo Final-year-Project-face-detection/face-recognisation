@@ -44,18 +44,22 @@ def markAttendence(name):
                 dtString = now.strftime('%H:%M:%S')
                 FourthYearASec.objects.create(
                     usn = name,
-                    status = 'P'
+                    status = 'P',
+                    edate = now,
+                    ldate = now,
                 )
                 f.writelines(f'\n{name}, {dtString}')
-                
+            if name in nameList:
+                now = datetime.now()
+                dtString = now.strftime('%H:%M:%S')
+                t = FourthYearASec.objects.get(usn=name)
+                t.ldate = now  # change field
+                t.save()
                 
 
 
 encodeListKnown = findEncodings(images)
 print(len(encodeListKnown), 'Encoding Complete')
-# print('Encoding Complete')
-# camara location here
-# camara = views.camNum(request)
 camara = 0
 
 class LiveWebCam(object):

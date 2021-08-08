@@ -1,0 +1,165 @@
+body 
+{
+  font-family: "Karla", sans-serif;
+  background-color:#f6e6cb;
+  margin:10px;
+  
+}
+
+.brand-wrapper 
+{
+ 
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #a0937d;
+  border-radius: 27.5px;
+  box-shadow: 0 10px 20px 0 #a0937d;
+  overflow: hidden;
+
+  width:1073px;
+  float: left;
+   
+
+}
+.logo{
+  height: 80px; 
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+
+
+.camera
+{
+  float: right;
+  border-radius: 27.5px;
+  box-shadow: 0 10px 20px 0 #a0937d;
+  background-color:black;
+  width:300px;
+  height:200px;
+  margin:10px;
+    
+}
+.student
+{
+  margin-top:-200px;
+  margin-left:10px;
+  float: left;
+  border-radius: 27.5px;
+  box-shadow: 0 10px 20px 0 #a0937d;
+  background-color:#a0937d;
+  width:81%;
+  height:100%;
+  padding: 10px;
+  display: block;
+    
+}
+.teacher
+{
+   
+  
+  border-radius: 27.5px;
+  box-shadow: 0 10px 20px 0 #a0937d;
+  background-color:#a0937d;
+  width:350px;
+  height:465px;
+  margin-top: 10px;
+  margin-left: 50px; 
+  padding: 10px;
+  text-align: center;
+  padding-top: 15px;
+  float: right;
+
+}
+.teach{
+
+  height: 130px;
+  width:  140px;
+  box-shadow: 0 10px 20px 0 #f6e6cb;
+  border-radius: 50%;
+}
+
+.one
+{
+  font-family: 'Rasa', serif;
+  font-size:20px;
+  font-weight: bolder;
+  color:black;
+}
+
+.two
+{
+  font-family: 'Rasa', serif;
+  font-size:16px;
+  font-weight: bolder;
+  color:black;
+}
+.mark
+{
+  margin:5px;
+  width:100px;
+  height: 35px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;  
+  border: 1px solid black;
+  box-shadow: 0 10px 20px 0 #a0937d;
+  text-align: center;
+}
+ .mark:hover
+{
+  color: black;
+  background-color: white; 
+}
+
+.print
+{
+  
+  width:200px;
+  height: 35px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;  
+  border: 1px solid black;
+  box-shadow: 0 10px 20px 0 #a0937d;
+  text-align: center;
+}
+
+.print:hover
+{
+  color: black;
+  background-color: white; 
+}
+
+.show
+{
+  margin-top:85px ;
+  margin-left:30px;
+}
+
+.month
+{
+  height: 160px;
+  width:  190px;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0 10px 20px 0 #f6e6cb;
+  border: 1px solid black;
+}
+.block
+{
+  padding:10px;
+  float: left;
+}
+.but {
+  width:191px;
+  background: black;
+  color:white;
+  height: 35px;
+  border-radius:0px 0px 10px 10px ;
+  box-shadow: 0 10px 20px 0 #f6e6cb;
+  border: 1px solid black;
+  font-family: 'Rasa', serif;
+  font-weight: bolder;
+  
+}
