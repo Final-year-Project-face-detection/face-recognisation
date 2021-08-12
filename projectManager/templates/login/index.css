@@ -56,7 +56,7 @@ padding: 85px 60px 60px;
 .login-card-description
 {
   font-size: 25px;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bolder;
   margin-bottom: 29px;
   font-family: 'Rasa', serif;
@@ -136,12 +136,12 @@ padding: 85px 60px 60px;
   padding-top: 13px;
   padding-bottom: 12px;
   
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin-bottom: 24px;
   }
 .login-card .login-btn:hover

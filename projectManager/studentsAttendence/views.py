@@ -56,7 +56,8 @@ def markAttendance(request):
     context ={
         'cam': cam,
         'details'  : StudentsDetails.objects.all(),
-        'del' : FourthYearASec.objects.all()
+        'camera': CameraNumbers.objects.get(Cameras=cam),
+        'del' : FourthYearASec.objects.all(),
     }
     return render(request, 'captures/index.html', context)
 

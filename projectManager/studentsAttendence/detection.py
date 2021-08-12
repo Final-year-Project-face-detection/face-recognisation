@@ -45,15 +45,15 @@ def markAttendence(name):
                 FourthYearASec.objects.create(
                     usn = name,
                     status = 'P',
-                    edate = now,
-                    ldate = now,
+                    etime = now,
+                    ltime = now,
                 )
                 f.writelines(f'\n{name}, {dtString}')
             if name in nameList:
                 now = datetime.now()
                 dtString = now.strftime('%H:%M:%S')
                 t = FourthYearASec.objects.get(usn=name)
-                t.ldate = now  # change field
+                t.ltime = now  # change field
                 t.save()
                 
 
@@ -87,7 +87,7 @@ class LiveWebCam(object):
                 matchIndex = np.argmin(faceDis)
 
                 if matches[matchIndex]:
-                    if faceDis[0] < 0.75:
+                    if faceDis[0] < 0.8:
                         name = classNames[matchIndex].upper()
                     else:
                         name = "UNKNOWN"

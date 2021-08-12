@@ -33,6 +33,7 @@
                 <form method="POST">
                   {% csrf_token %}
                  <div class="form-group">
+                 {{ from.name }}
                     {{ form }}
                       <center><input name="login" id="login" class="btn btn-dark .login-btn" type="Submit" value="Submit" /><center>
                   </div>

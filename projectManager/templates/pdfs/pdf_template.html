@@ -22,7 +22,7 @@
             left: 50pt; width: 512pt; top: 50pt; height: 40pt;
         }
         @frame content_frame {          /* Content Frame */
-            left: 50pt; width: 512pt; top: 90pt; height: 632pt;
+            left: 50pt; width: 512pt; top: 10pt; height: 632pt;
         }
         @frame footer_frame {           /* Another static Frame */
             -pdf-frame-content: footer_content;
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <img src="{{ 'http://127.0.0.1:8000/static/images/bmslogo.png' }}" alt="logo" class="logo" />
+    <center><img src="{{ 'http://127.0.0.1:8000/static/images/bmslogo.png' }}" alt="logo" height='100px' width='500px' class="logo" /></center>
     <div style="text-align: center;">
         <table class="styled-table">
             <thead>
@@ -41,8 +41,8 @@
                     <th>Name</th>
                     <th>USN</th>
                     <th>Status</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
                 </tr>
             </thead>
             <tbody>

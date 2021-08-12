@@ -40,10 +40,10 @@
                 <p class="one">{{ user.first_name }} {{ user.last_name }}</p>
                 <p class="one" style="margin-top: -15px;">{{ user.email }}</p>
                 <p style="margin-top: -20px;font-weight: bold;">________________</p>
-                <p class="two">Camera Number</p>
-                <p class="two" style="margin-top: -10px;">Branch</p>
-                <p class="two" style="margin-top: -10px;">Semester</p>
-                <p class="two" style="margin-top: -10px;">Section</p>
+                <p class="two">Clasroom : {{ camera.Classroom }}</p>
+                <p class="two" style="margin-top: -10px;">Semister : {{ camera.semester }}</p>
+                <p class="two" style="margin-top: -10px;">Branch : {{ camera.branch }}</p>
+                <p class="two" style="margin-top: -10px;">Year : {{ camera.year }}</p>
                 <p style="margin-top: -20px;font-weight: bold;">________________</p>
                 <a href="{% url 'logout'%}" ><button class='mark'> Logout <button> </a>
             </div>
